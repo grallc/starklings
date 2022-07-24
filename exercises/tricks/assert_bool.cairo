@@ -7,22 +7,22 @@
 # TODO Implement the following boolean asserts without "if"
 
 func assert_or(x, y):
-    # FILL ME
+    assert 0 = (x - 1) * (y - 1)
     return ()
 end
 
 func assert_and(x, y):
-    # FILL ME
+    assert 2 = x + y
     return ()
 end
 
 func assert_nor(x, y):
-    # FILL ME
+    assert 0 = x * y
     return ()
 end
 
 func assert_xor(x, y):
-    # FILL ME
+    assert 1 = x + y
     return ()
 end
 
