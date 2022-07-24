@@ -3,8 +3,6 @@
 # There are multiple ways to scan through an array.
 # Using recursion, one could go forwards or backwards.
 
-# I AM NOT DONE
-
 from starkware.cairo.common.math_cmp import is_le
 from starkware.cairo.common.alloc import alloc
 
@@ -22,8 +20,8 @@ func is_increasing{range_check_ptr : felt}(array : felt*, array_len : felt) -> (
         return (1)
     end
 
-    let curr_value = 0
-    let next_value = 0
+    let curr_value = [array]
+    let next_value = [array + 1]
 
     # Do not modify these lines
     let (is_sorted) = is_le(curr_value, next_value)
@@ -40,7 +38,16 @@ end
 # Return 0 otherwise
 
 func is_decreasing{range_check_ptr : felt}(array : felt*, array_len : felt) -> (res : felt):
-    # FILL ME
+    if array_len == 0:
+        return (1)
+    end
+
+    if array_len == 1:
+        return (1)
+    end
+
+    let curr_value = array[array_len - 1]
+    let next_value = array[array_len - 2]
 
     # Do not modify this line
     let (is_sorted) = is_le(curr_value, next_value)
